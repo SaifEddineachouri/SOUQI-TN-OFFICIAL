@@ -17,7 +17,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
 
   if (orderItems && orderItems.length === 0) {
     res.status(400)
-    throw new Error('No order items')
+    throw new Error('Aucun article de commande')
     return
   } else {
     const order = new Order({
@@ -50,7 +50,7 @@ const getOrderById = asyncHandler(async (req, res) => {
     res.json(order)
   } else {
     res.status(404)
-    throw new Error('Order not found')
+    throw new Error('Commande introuvable')
   }
 })
 
@@ -69,7 +69,7 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
     res.json(updatedOrder)
   } else {
     res.status(404)
-    throw new Error('Order not found')
+    throw new Error('Commande introuvable')
   }
 })
 
@@ -88,7 +88,7 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
     res.json(updatedOrder)
   } else {
     res.status(404)
-    throw new Error('Order not found')
+    throw new Error('Commande introuvable')
   }
 })
 
