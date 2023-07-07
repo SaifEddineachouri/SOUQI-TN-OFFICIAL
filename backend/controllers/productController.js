@@ -33,7 +33,7 @@ const getProductById = asyncHandler(async (req, res) => {
     res.json(product)
   } else {
     res.status(404)
-    throw new Error('Product not found')
+    throw new Error('Produit non trouvé')
   }
 })
 
@@ -47,7 +47,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
     res.json({ message: 'Product removed' })
   } else {
     res.status(404)
-    throw new Error('Product not found')
+    throw new Error('Produit non trouvé')
   }
 })
 
@@ -93,7 +93,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     res.json(updatedProduct)
   } else {
     res.status(404)
-    throw new Error('Product not found')
+    throw new Error('Produit non trouvé')
   }
 })
 
@@ -112,7 +112,7 @@ const createProductReview = asyncHandler(async (req, res) => {
 
     if (alreadyReviewed) {
       res.status(400)
-      throw new Error('Product already reviewed')
+      throw new Error('Produit déjà évalué')
     }
 
     const review = {
@@ -132,7 +132,7 @@ const createProductReview = asyncHandler(async (req, res) => {
     res.status(201).json({ message: 'Review added' })
   } else {
     res.status(404)
-    throw new Error('Product not found')
+    throw new Error('Produit non trouvé')
   }
 })
 
