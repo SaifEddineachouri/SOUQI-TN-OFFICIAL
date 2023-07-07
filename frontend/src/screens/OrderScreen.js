@@ -179,7 +179,7 @@ const OrderScreen = () => {
                     className='btn btn-block'
                     onClick={deliverHandler}
                   >
-                    Mark As Delivered
+                    Marquer comme livré
                   </Button>
                 </ListGroup.Item>
               )}
@@ -190,7 +190,7 @@ const OrderScreen = () => {
                     className='btn btn-block'
                     onClick={payHandler}
                   >
-                    Mark As Paid
+                    Marquer comme payé
                   </Button>
                 </ListGroup.Item>
               )}
