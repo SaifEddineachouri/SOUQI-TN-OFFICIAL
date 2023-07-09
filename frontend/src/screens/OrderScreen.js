@@ -75,11 +75,12 @@ const OrderScreen = () => {
                 <strong>Nom :</strong> {order.user.name}
               </p>
               <p>
-                Adresse mail :
+                Adresse e-mail :
                 <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
               </p>
+              <p>Numéro de téléphone : +216 {order.shippingAddress.numero}</p>
               <p>
-                <strong>Adresse :</strong>
+                <strong>Adresse Postale :</strong>
                 {order.shippingAddress.address},{order.shippingAddress.city}{' '}
                 {order.shippingAddress.postalCode},
                 {order.shippingAddress.country}
