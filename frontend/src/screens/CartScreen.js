@@ -26,7 +26,7 @@ const CartScreen = () => {
   }
 
   const checkoutHandler = () => {
-    navigate('/expedition')
+    navigate('/connexion?redirect=/expedition')
   }
 
   return (
