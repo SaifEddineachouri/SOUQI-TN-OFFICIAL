@@ -13,13 +13,16 @@ const ShippingScreen = () => {
   const [city, setCity] = useState(shippingAddress.city)
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode)
   const [country, setCountry] = useState(shippingAddress.country)
+  const [numero, setNumero] = useState(shippingAddress.numero)
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
   const submitHandler = (e) => {
     e.preventDefault()
-    dispatch(saveShippingAddress({ address, city, postalCode, country }))
+    dispatch(
+      saveShippingAddress({ address, city, postalCode, country, numero })
+    )
     navigate('/paiement')
   }
   return (
@@ -64,6 +67,16 @@ const ShippingScreen = () => {
             placeholder='Entrez votre Pays'
             value={country}
             onChange={(e) => setCountry(e.target.value)}
+          ></Form.Control>
+        </Form.Group>
+
+        <Form.Group controlId='numero'>
+          <Form.Label>Numéro de téléphone</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Entrez votre Numéro'
+            value={numero}
+            onChange={(e) => setNumero(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
